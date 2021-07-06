@@ -1,5 +1,30 @@
-<div>
-  <label>Payee Name</label>
-  <input (input)= "onNameChange($event)" required/>
+<div id = "main-left">
+  <div id = "rec-name">
+    <label>Payee Name</label> <br>
+    <input (input)= "onNameChange($event)" required/> 
+  </div>
+  <div id = "pay-date">
+    <label>Payment Date</label>  <br>
+    <input type="date" (input) = "onDateChange($event)" />
+  </div>
+  <div id = "amount">
+    <label>Amount</label> <br>
+    <input/>
+  </div>
+ 
 </div>
-{{ name | titlecase }}
+
+<div id = "main-right">
+    <div>
+      <label>Receiver Name</label><br>
+      {{name | titlecase}}
+    </div>
+    <div>
+      <label>Payment Date</label><br>
+      {{dateInput |  date: "longDate"}}
+    </div>
+    <div>
+      <label>Amount</label><br>
+      {{name | titlecase}}
+    </div>
+</div>
