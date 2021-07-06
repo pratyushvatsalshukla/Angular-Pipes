@@ -9,7 +9,7 @@
   </div>
   <div id = "amount">
     <label>Amount</label> <br>
-    <input/>
+    <input (input) = "onAmountChange($event)"/>
   </div>
  
 </div>
@@ -25,6 +25,6 @@
     </div>
     <div>
       <label>Amount</label><br>
-      {{name | titlecase}}
+      {{amountInput | currency: "INR"}}
     </div>
 </div>
